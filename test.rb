@@ -13,7 +13,7 @@ server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'test.html.erb')
 
 server.mount('/indicate.cgi', WEBrick::HTTPServlet::CGIHandler, 'indicate.rb')
 
-# この一行を追記
+server.mount('/', WEBrick::HTTPServlet::ERBHandler, 'goya.html.erb')
 server.mount('/goya.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya.rb')
 
 server.start
